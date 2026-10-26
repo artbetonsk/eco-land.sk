@@ -5,9 +5,15 @@ if (form) {
   const preview = document.querySelector('#email-preview');
   const bodyField = document.querySelector('#email-body');
   const emailLink = document.querySelector('#email-link');
-  if (new URLSearchParams(location.search).get('zaujem') === 'obhliadka') {
-    form.elements.interest.value = 'Obhliadka a kúpa územia';
-  }
+  const interests = {
+    obhliadka: 'Obhliadka a kúpa územia',
+    esg: 'ESG / firemný deň',
+    prenajom: 'Prenájom priestoru',
+    tim: 'Teambuilding a zážitky',
+    vzdelavanie: 'Workshop / vzdelávanie'
+  };
+  const selectedInterest = interests[new URLSearchParams(location.search).get('zaujem')];
+  if (selectedInterest) form.elements.interest.value = selectedInterest;
   form.addEventListener('input', () => {
     if (!preview.hidden) {
       preview.hidden = true;
