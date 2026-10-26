@@ -9,3 +9,9 @@
 .hero-landscape-photo{height:600px;object-position:50% 25%}
 .hero-landscape:before{background:linear-gradient(180deg,rgba(6,24,15,.60) 0,rgba(6,24,15,.66) 360px,#0d291d 600px)}
 }
+
+/* Landscape headers on the territory and investment pages. */
+.hero-landscape .page-intro>p{color:#f2f5ed;text-shadow:0 1px 5px rgba(0,0,0,.6)}
+.hero-landscape.hero-compact:before{background:linear-gradient(90deg,rgba(6,24,15,.72),rgba(6,24,15,.66) 55%,rgba(6,24,15,.12))}
+.hero-landscape .hero-stats{text-shadow:0 1px 5px rgba(0,0,0,.6)}
+@media(max-width:760px){.hero-landscape.hero-compact:before{background:linear-gradient(180deg,rgba(6,24,15,.60),rgba(6,24,15,.72))}}
