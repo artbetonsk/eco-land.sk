@@ -1,5 +1,15 @@
-# EcoLand Buková
+# EcoLand projekt, o. z.
 
-Responzívna webová prezentácia projektu EcoLand Buková a predajnej ponuky územia.
+Statický web občianskeho združenia na existujúcom GitHub Pages. Canonical doména: https://eco-land.sk/.
 
-Tento repozitár slúži na bezplatné publikovanie skúšobnej stránky cez GitHub Pages. Doména eco-land.sk sa nesmie presmerovať pred schválením novej verzie.
+Verejná navigácia: Domov, Projekt Buková, Spolupráca, O nás, Kontakt.
+
+Jediný kontaktný formulár je na `kontakt.html` a používa natívny POST na FormSubmit. Návratová stránka je `dakujeme.html`. Staré odkazy na `index.html#kontakt` fungujú cez prechodnú kontaktnú sekciu; parameter `zaujem` sa prenáša k formuláru.
+
+`investicia.html` je zachovaný pre individuálne rokovania. Má `noindex,follow`, nie je v navigácii ani sitemap. Stránka je naďalej verejne dostupná každému, kto pozná URL; nejde o prístupové zabezpečenie. Pôvodné verzie sú zachované v histórii Git.
+
+Autentická fotografia: `assets/bukova-krajina-web.webp`. Jediná prezentačná mapa: `assets/mapa-ecoland-bukova.webp`, vložená na stránke Projekt Buková.
+
+`assets/style.css` uchováva pôvodný vizuálny základ, `assets/hero-landscape.css` fotografické záhlavia a `assets/ecoland.css` rozloženie novej architektúry.
+
+Doména, DNS ani `CNAME` sa pri reštrukturalizácii nemenia.
