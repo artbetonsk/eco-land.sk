@@ -1,21 +1,14 @@
 'use strict';
-// Kontaktný formulár používa natívny HTML POST na FormSubmit.co.
-// JavaScript iba predvyberie typ záujmu a nastaví návratovú adresu.
-(function () {
-  const form = document.querySelector('#contact-form');
-  if (!form) return;
-  const interests = {
-    obhliadka: 'Obhliadka a kúpa územia',
-    esg: 'ESG / firemný deň',
-    prenajom: 'Prenájom priestoru',
-    tim: 'Teambuilding a zážitky',
-    vzdelavanie: 'Workshop / vzdelávanie'
-  };
-  const selected = interests[new URLSearchParams(location.search).get('zaujem')];
-  if (selected && form.elements.interest) form.elements.interest.value = selected;
-  const next = document.querySelector('#form-next');
-  const origin = document.querySelector('#form-url');
-  if (next) next.value = new URL('dakujeme.html', location.href).href;
-  if (origin) origin.value = location.href.split('#')[0];
-  // Nezachytávať submit ani používať mailto – prehliadač odošle formulár cez POST.
+(function(){
+ const query=new URLSearchParams(location.search);
+ const form=document.querySelector('#contact-form');
+ const types={spolupraca:'Všeobecná spolupráca',projekt:'Partnerský environmentálny projekt',esg:'ESG / firemný deň',vzdelavanie:'Environmentálne vzdelávanie',dobrovolnictvo:'Dobrovoľníctvo',bukova:'Projekt Buková',obhliadka:'Projekt Buková',prenajom:'Projekt Buková',tim:'ESG / firemný deň'};
+ // Old homepage links keep working and carry the selected interest to the single form.
+ const legacy=document.querySelector('#kontakt a[href="kontakt.html"]');
+ if(legacy&&query.has('zaujem'))legacy.href='kontakt.html?'+query.toString();
+ if(!form)return;
+ const selected=types[query.get('zaujem')];
+ if(selected)form.elements.interest.value=selected;
+ document.querySelector('#form-next').value=new URL('dakujeme.html',location.href).href;
+ document.querySelector('#form-url').value=location.href.split('#')[0];
 })();
