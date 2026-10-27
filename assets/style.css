@@ -28,3 +28,17 @@
 /* Čitateľnosť dlhších textov a prístupné ovládanie. */
 .card p{line-height:1.75}.card p:last-child{margin-bottom:0}.hero .hero-inner h1{font-size:clamp(2.6rem,4.7vw,4.8rem)}.hero .eco-panel h2{font-size:clamp(1.9rem,3vw,2.7rem)}.cta p{max-width:760px;margin-top:20px}.page-intro p{max-width:760px}.page-intro h1{max-width:1000px}.hero .eyebrow{color:#d9bd91}.hero .eco-panel .eyebrow{color:#476752}.zone-links a:focus-visible{outline-offset:3px}.hero .eco-panel-stats small{color:#284b34}
 @media(max-width:760px){.hero .hero-inner h1{font-size:clamp(38px,9.5vw,61px)}.hero-stats span{min-width:0}.cta .btn{white-space:normal;text-align:center}.card h3{overflow-wrap:break-word}}
+
+/* Full association name in the existing brand typography. */
+.brand strong{display:block;white-space:nowrap}
+.brand small{line-height:1.5}
+@media(max-width:980px){.desktop-nav{display:none}.mobile-nav{display:block}}
+@media(max-width:600px){
+.header-inner{gap:12px;padding-block:10px}
+.brand{gap:8px;min-width:0}
+.brand .mark{width:34px;height:34px;flex-shrink:0}
+.brand strong{font-size:28px;line-height:1.06}
+.brand-extension{display:block;font-size:.8em;letter-spacing:-.04em}
+.brand small{max-width:160px;font-size:8px;letter-spacing:.08em;margin-top:5px}
+.mobile-nav{flex-shrink:0}
+}
